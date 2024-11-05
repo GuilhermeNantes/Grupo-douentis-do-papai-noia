@@ -1,8 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: rgb(253, 60, 60);
     padding: 20px;
     height: 60px; 
+    margin-top: 0;
 }
