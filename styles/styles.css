@@ -4,7 +4,7 @@
 }
 
 .inicio{
-    height: 1000px;
+    height: 900px;
     background-color: bisque;
 }
 
@@ -15,10 +15,14 @@
 }
 
 .textInicio{
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 20px;
 }
 
 header{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,10 +50,13 @@ header{
 } só um ideia mais para criaçao depois*/
 
 .descInicio{
+    
+    justify-content: space-between;
     display: flex;
     align-items: center;
-    gap: 100px;
-    margin: 50px;
+    margin: 100px;
+    margin-left: 100px;
+    margin-right: 200px;
 }
 
 .opcoes{
@@ -68,18 +75,21 @@ header{
     flex-direction: column;
     align-items: center;
     margin-top: 80px;
+    gap: 40px;
 }
 
 .container{
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .card{
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 360px;
+    width: 300px;
+    height: 400px;
     background-color: burlywood;
 }
 
@@ -97,5 +107,17 @@ header{
 @media(max-width: 480px){
     .descInicio{
         flex-direction: column;
+        gap: 40px;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .imagemInicio{
+        width: 300px;
+        height: 300px;
+    }
+
+    .textInicio{
+        width: 300px;
     }
 }
