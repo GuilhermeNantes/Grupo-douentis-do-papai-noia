@@ -11,6 +11,11 @@
     background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
 }
 
+.imagemInicio{
+    width: 600px;
+    height: 600px;
+    background-color: black;
+}
 
 .textInicio{
     display: flex;
