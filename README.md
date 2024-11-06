@@ -1,4 +1,8 @@
-# Grupo-douentis-do-papai-noia
-um simples de cunrhjsdfskdf
+### Por favor atulize as paginas
+
+- Guilherme:
+*** eu crie a tela de sobre-nos mais ta no inicio ***
+***  botao do inicio já levar para tela de sobre-nos ***
+
 
 vou mata o guilherme oficial

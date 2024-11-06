@@ -27,6 +27,23 @@ header{
     height: 60px; 
     margin-top: 0;
 }
+/* header do site -- guilherme */
+/* .opcoes a{
+    padding: 10px 20px;
+    background: #000;
+    text-decoration: none;
+}
+.opcoes button{
+    border: 0;
+    background: none;
+}
+
+.opcoes a:hover{
+    background: #fff;
+}
+.opcoes button:hover{
+    background: #fff;
+} só um ideia mais para criaçao depois*/
 
 .descInicio{
     display: flex;
