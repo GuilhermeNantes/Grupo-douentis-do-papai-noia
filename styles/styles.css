@@ -22,14 +22,13 @@
 }
 
 header{
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     height: 60px; 
-   
 }
+
 /* header do site -- guilherme */
 /* .opcoes a{
     padding: 10px 20px;
