@@ -1,13 +1,39 @@
-*{
-    padding: 0;
-    margin: 0;
+
+body,html{margin:0;padding:0;}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  perspective: 2px;
+  transform-style: preserve-3d;
 }
 
-.inicio{
-    height: 1000px;
-    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
+.section {
+  position: relative;
+  height: 100vw;
+  min-height: 700px;
+  transform-style: inherit; 
 }
 
+.section::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translateZ(-2px) scale(3);
+}
+
+.bg1::before {
+  background-image: url('https://s1.1zoom.me/b5050/760/Texture_Red_Drops_Red_background_579155_1920x1080.jpg');
+}
+  
+                                       /* final Paralax */
 
 .textInicio{
     font-family: 'Mountains of Christmas', serif;
@@ -95,12 +121,15 @@ header{
 
 .container{
     display: flex;
+    align-items: center;
+    display: flex;
     gap: 20px;
 }
 
 .card{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 250px;
     height: 360px;
     background-color: burlywood;
