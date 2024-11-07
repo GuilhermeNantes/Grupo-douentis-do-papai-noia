@@ -1,101 +1,65 @@
-/* Reset básico */
-* {
+*{
+    font-family: "Raleway", sans-serif;
+    padding: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo do body */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* Estilo do header */
-header {
+.menu{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-    background-color: #333;
-    color: white;
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5em;
-}
-
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #ffcc00;
-}
-
-/* Menu Toggle para mobile */
-.menu-toggle {
-    display: none;
     flex-direction: column;
-    cursor: pointer;
-    gap: 0.3em;
+    gap: 8px;
+    display: none;
 }
 
-.menu-toggle span {
-    width: 25px;
+.barra{
+    background-color: white;
+    width: 35px;
     height: 3px;
-    background: white;
+    border-radius: 2px;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 1.2em;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: #333;
-        padding: 1em;
-        border-radius: 8px;
-        width: 200px;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
+.logo img{
+    height: 80px;
+    width: 160px;
+    object-fit: cover;
+    filter: drop-shadow(0px 1px 3px rgb(116,0,0));
 }
 
-/* Seção de Descrição Inicial */
-.descInicio {
+body{
+    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
+}
+
+.inicio{
+    height: 900px;
+}
+
+.resto{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
-    margin: 100px 200px;
+    flex-direction: column;
+    gap: 150px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 100%);
 }
 
-.imagemInicio {
+.imagemInicio{
+    position: relative;
     width: 600px;
     height: 600px;
-    background-color: black;
+}
+
+.imagemInicio .cor{
+    background-color: rgb(255, 91, 91);
+    border-radius: 1000px;
+    filter: blur(150px);
+}
+
+.imagemInicio img, .imagemInicio .cor{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: rgb(151, 0, 0);
+    filter: blur(5px); */
 }
 
 .textInicio {
@@ -103,49 +67,74 @@ header {
     flex-direction: column;
     width: 700px;
     gap: 20px;
+    justify-content: center;
+    color: white;
+    filter: drop-shadow(0px 1px 2px rgb(78, 0, 0));
 }
 
-.textInicio h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.textInicio h1{
+    filter: drop-shadow(0px 1px 3px rgb(175, 52, 52));
+    font-family: 'Mountains of Christmas', serif;
+    font-weight: 1000;
+    font-size: 70px;
 }
 
-.textInicio p {
-    font-size: 1.2em;
-    color: #555;
+.textInicio p{
+    font-size: 25px;
 }
 
-/* Responsividade para a seção de Descrição */
-@media (max-width: 768px) {
-    .descInicio {
-        flex-direction: column;
-        margin: 20px;
-    }
-
-    .imagemInicio {
-        width: 100%;
-        height: auto;
-    }
-
-    .textInicio {
-        width: 100%;
-    }
-
-    .textInicio h1 {
-        font-size: 2em;
-    }
-
-    .textInicio p {
-        font-size: 1em;
-    }
+header{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    height: 60px; 
 }
 
-/* Estilo da Agenda */
-.agenda {
+.descInicio{
+    
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    gap: 10%;
+}
+
+.opcoes{
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.opcoes a{
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0px 2px 4px rgb(116, 0, 0));
+}
+
+#inscrever1{
+    border: 0;
+    padding: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 100px;
+    filter: drop-shadow(0px 1px 4px rgb(116, 0, 0));
+}
+
+#inscrever1 a{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.agenda{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 300px;
     gap: 40px;
 }
 
@@ -218,14 +207,69 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    gap: 50px;
 }
 
-.contador {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
+.dias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+#contDias{
+    font-size: 200px;
+    margin-bottom: 50px;
+}
+
+#contador{
+    font-size: 100px;
+}
+
+footer{
+    height: 350px;
+    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
+}
+
+@-webkit-keyframes shadow-drop-2-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      -webkit-transform: translateZ(50px);
+              transform: translateZ(50px);
+      -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@media(max-width: 768px){
+
+    .opcoes{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+    }
+
+    #inscrever1{
+        display: none;
+    }
+
+    .inicio{
+        height: 1000px;
+    }
+
+    .descInicio{
+        flex-direction: column;
+        gap: 40px;
+        margin: 0;
+        margin-top: 50px;
+    }
 
 /* Estilo do Botão de Inscrição */
 #inscrever2 {
@@ -240,30 +284,46 @@ header {
     transition: background-color 0.3s ease;
 }
 
-#inscrever2 a {
-    color: white;
-    text-decoration: none;
-}
+    .imagemInicio .cor{
+        background-color: rgb(255, 91, 91);
+        border-radius: 1000px;
+        filter: blur(70px);
+    }
 
-#inscrever2:hover {
-    background-color: #ffcc00;
-}
+    .textInicio{
+        width: 300px;
+    }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+    header{
+        padding: 20px;
+        padding-bottom: 10px;
+    }
 
-footer p {
-    font-size: 1em;
-}
+    .logo img{
+        height: 60px;
+        width: 110px;
+        object-fit: cover;
+    }
 
-/* Responsividade para o Rodapé */
-@media (max-width: 768px) {
-    footer p {
-        font-size: 0.9em;
+    .textInicio h1{
+        font-weight: 1000;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .textInicio p{
+        font-size: 18px;
+    }
+
+    .resto{
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%);
+    }
+
+    .agenda{
+        margin-top: 200px;
+    }
+
+    #contador{
+        font-size: 70px;
     }
 }
