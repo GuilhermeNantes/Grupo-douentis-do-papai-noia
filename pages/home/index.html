@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,101 +7,90 @@
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    
-    <div class="inicio">
-
-        <header>
-
-            <div class="logo">
-                <h1>Natal Teste</h1>
+    <header>
+        <div class="logo">Natal</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+        </nav>
+    </header>
 
-            <div class="opcoes">
-                <a href="">Início</a>
-                <a href="">Agenda</a>
-                <a href="/pages/sobre-nos/index.html">Sobre Nós</a>
-                <button id="inscrever1"><a href="">Inscreva-se</a></button>
+    <main> <!-- Início da tag main -->
+
+        <section class="descInicio"> <!-- Seção de Descrição do Evento -->
+            <div class="imagemInicio">
+                <img src="" alt="Imagem do Evento">
             </div>
-
-        </header>
-
-        <div class="descInicio">
-
-            <div class="imagemInicio"> <!-- Imagem da descrição do evento (Esquerda) -->
-                <img src="" alt="">
-            </div>
-
-            <div class="textInicio"> <!-- Texto da descrição do evento (Direita) -->
+            <div class="textInicio">
                 <h1>Natal está chegando!</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium recusandae sapiente saepe, asperiores voluptates aperiam delectus cumque tempora laborum laudantium libero magni, nobis explicabo, architecto possimus aliquam eaque corporis! Exercitationem.</p>
             </div>
+        </section> <!-- Fim da seção de descrição -->
 
-        </div>
-
-    </div>
-
-    <div class="agenda">
-
-        <h1>Agenda</h1>
-
-        <div class="container"> <!-- Container dos Cards -->
-
-            <div class="card"> <!-- Card 1 -->
-
-                <div class="cardImg">
-                    <img src="" alt="">
+        <section class="agenda"> <!-- Seção de Agenda -->
+            <h1>Agenda</h1>
+            <div class="container">
+                <!-- Cards dos eventos -->
+                <div class="card">
+                    <div class="cardImg">
+                        <img src="" alt="Imagem do Evento 1">
+                    </div>
+                    <div class="cardText">
+                        <h2 class="tituloCard">Evento 1</h2>
+                        <p class="descCard">Descrição do evento 1. Acontecerá em breve e trará muitas atrações interessantes.</p>
+                    </div>
                 </div>
 
-                <div class="cardText">
-                    <h2 class="tituloCard">Evento</h2>
-                    <p class="descCard">teste teste teste teste teste teste teste teste teste teste</p>
+                <div class="card">
+                    <div class="cardImg">
+                        <img src="" alt="Imagem do Evento 2">
+                    </div>
+                    <div class="cardText">
+                        <h2 class="tituloCard">Evento 2</h2>
+                        <p class="descCard">Descrição do evento 2. Prepare-se para grandes surpresas e momentos inesquecíveis.</p>
+                    </div>
                 </div>
 
+                <div class="card">
+                    <div class="cardImg">
+                        <img src="" alt="Imagem do Evento 3">
+                    </div>
+                    <div class="cardText">
+                        <h2 class="tituloCard">Evento 3</h2>
+                        <p class="descCard">Descrição do evento 3. Junte-se a nós para celebrar com alegria e muita energia!</p>
+                    </div>
+                </div>
             </div>
+        </section> <!-- Fim da Seção de Agenda -->
 
-            <div class="card"> <!-- Card 2 -->
-
-                <div class="cardImg">
-                    <img src="" alt="">
-                </div>
-
-                <div class="cardText">
-                    <h2 class="tituloCard">Evento</h2>
-                    <p class="descCard">teste teste teste teste teste teste teste teste teste teste</p>
-                </div>
-
+        <section class="containerContador"> <!-- Seção do Contador -->
+            <div class="contador">
+                <!-- O contador será implementado aqui -->
             </div>
-            <div class="card"> <!-- Card 3 -->
+            <!-- Alterei a tag <a> para fora do botão para seguir a semântica correta -->
+            <button id="inscrever2"><a href="#">Inscreva-se</a></button>
+        </section> <!-- Fim da seção de Contador -->
 
-                <div class="cardImg">
-                    <img src="" alt="">
-                </div>
+    </main> <!-- Fim da tag main -->
 
-                <div class="cardText">
-                    <h2 class="tituloCard">Evento</h2>
-                    <p class="descCard">teste teste teste teste teste teste teste teste teste teste</p>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="containerContador">
-
-        <div class="contador"> <!-- Contador regressivo do inicio do evento (Fazer no JavaScript) -->
-
-        </div>
-        
-        <button id="inscrever2"><a href="">Inscreva-se</a></button> <!-- Botão de inscrição de destaque -->
-        
-    </div>
-
+    <!-- Rodapé -->
     <footer>
-
+        <div class="footer-content">
+            <p>&copy; 2024 Natal Natalino - Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="/scripts/inicio.js"></script>
-
 </body>
+</html>
+
 </html>

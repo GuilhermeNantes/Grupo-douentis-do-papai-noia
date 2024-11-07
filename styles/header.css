@@ -1,4 +1,3 @@
-
 /* Reset básico */
 * {
     margin: 0;
@@ -7,78 +6,125 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-image: url(https://img.freepik.com/fotos-gratis/projeto-de-paisagem-pop-brilhante_23-2149213461.jpg?t=st=1731006766~exp=1731010366~hmac=65b49583f4e2d7c4c8fdbdea6c83d4e56039368ca9abf98a24a545c5c6cdad6d&w=1380);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Estilo do header */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 1em 2em;
-    background-color: #333;
+    backdrop-filter: blur(5px);
+    background-color: #00000031;
     color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
+/* Estilo da logo */
+.logo img{
+    width: 160px;
+    height: 80px;
+}
+/* Ajuste para o container do nav */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;  /* Centraliza os itens dentro do nav */
 }
 
 /* Estilo do menu de navegação */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5em;
+    gap: 2em;
+    align-items: center;
 }
 
 .nav-links li a {
+    padding: 16px 20px;
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #ffcc00;
+    border-radius: 25px;
+    background-color: #ffcc00;
+    transform: translateY(-2px);
 }
 
-/* Estilo para o batão do menu no mobile */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
+/* Botão */
+.header-button {
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    padding: 16px 45px;
+    border-radius: 25px;
+    font-size: 1.2em;
     cursor: pointer;
-    gap: 0.3em;
+    transition: background-color 0.3s ease;
 }
 
-.menu-toggle span {
+.header-button:hover {
+    background-color: #000000;
+    color:#ffffff;
+}
+
+/* Ícone de menu no mobile */
+.menu-toggle {
+    
+    display: none; /* Escondido em telas grandes */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.menu-toggle .bar {
     width: 25px;
     height: 3px;
     background: white;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
-    .logo{
-        font-size: 0.7em;
-    }
     .nav-links {
-        display: none;
-        flex-direction: column;
+        display: none; /* Esconde os links de navegação */
         position: absolute;
-        top: 60px;
-        right: 20px;
-        background: #333;
-        padding: 1em;
-        border-radius: 8px;
-        width: 200px;
+        top: 115px;
+        right: 0;
+        background-color: #00000071;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+        gap: 1.5em;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .nav-links.show {
+        gap: 30px;
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .menu-toggle {
-        display: flex;
+        display: flex; /* Exibe o ícone do menu no mobile */
+    }
+
+    .header-button {
+        display: none; /* Esconde o botão em telas menores */
     }
 }
-
