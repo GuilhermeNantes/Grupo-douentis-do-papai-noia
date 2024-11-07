@@ -4,10 +4,25 @@
     margin: 0;
 }
 
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    display: none;
+}
+
+.barra{
+    background-color: white;
+    width: 35px;
+    height: 3px;
+    border-radius: 2px;
+}
+
 .logo img{
     height: 80px;
     width: 160px;
     object-fit: cover;
+    filter: drop-shadow(0px 1px 3px rgb(116,0,0));
 }
 
 body{
@@ -16,11 +31,13 @@ body{
 
 .inicio{
     height: 900px;
-   
 }
 
 .resto{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,1) 15%,rgba(255,255,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 100%);
 }
 
 .imagemInicio img{
@@ -34,10 +51,6 @@ body{
     flex-direction: column;
     width: 700px;
     gap: 20px;
-    /* font-family: 'Mountains of Christmas', serif; */
-    /* background-color: green;
-    padding: 10px;
-    border-radius: 20px; */
     justify-content: center;
     color: white;
 }
@@ -60,55 +73,50 @@ header{
     height: 60px; 
 }
 
-/* header do site -- guilherme */
-/* .opcoes a{
-    padding: 10px 20px;
-    background: #000;
-    text-decoration: none;
-}
-.opcoes button{
-    border: 0;
-    background: none;
-}
-
-.opcoes a:hover{
-    background: #fff;
-}
-.opcoes button:hover{
-    background: #fff;
-} só um ideia mais para criaçao depois*/
-
 .descInicio{
     
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
     align-items: center;
-    margin: 100px;
-    margin-left: 100px;
-    margin-right: 200px;
+    margin-top: 100px;
+    gap: 10%;
 }
 
 .opcoes{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 55px;
+}
+
+.opcoes a{
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0px 2px 4px rgb(116, 0, 0));
 }
 
 #inscrever1{
-    padding: 10px;
-    border-radius: 10px;
+    border: 0;
+    padding: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 100px;
+    filter: drop-shadow(0px 1px 4px rgb(116, 0, 0));
 }
 
-.resto{
-    display: flex;
-    flex-direction: column;
+#inscrever1 a{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .agenda{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 300px;
     gap: 40px;
 }
 
@@ -136,6 +144,27 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
+}
+
+.dias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contDias{
+    font-size: 200px;
+    margin-bottom: 50px;
+}
+
+#contador{
+    font-size: 100px;
+}
+
+footer{
+    height: 350px;
+    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
 }
 
 @-webkit-keyframes shadow-drop-2-center {
@@ -155,6 +184,23 @@ header{
 }
 
 @media(max-width: 480px){
+
+    .opcoes{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+    }
+
+    #inscrever1{
+        display: none;
+    }
+
+    .inicio{
+        height: 1000px;
+    }
+
     .descInicio{
         flex-direction: column;
         gap: 40px;
@@ -162,12 +208,45 @@ header{
         margin-top: 50px;
     }
 
-    .imagemInicio{
+    .imagemInicio img{
         width: 300px;
         height: 300px;
     }
 
     .textInicio{
         width: 300px;
+    }
+
+    header{
+        padding: 20px;
+        padding-bottom: 10px;
+    }
+
+    .logo img{
+        height: 60px;
+        width: 110px;
+        object-fit: cover;
+    }
+
+    .textInicio h1{
+        font-weight: 1000;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .textInicio p{
+        font-size: 18px;
+    }
+
+    .resto{
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%);
+    }
+
+    .agenda{
+        margin-top: 200px;
+    }
+
+    #contador{
+        font-size: 70px;
     }
 }
