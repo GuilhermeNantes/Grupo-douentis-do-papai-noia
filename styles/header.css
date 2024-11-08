@@ -25,6 +25,8 @@ header {
 
 /* Estilo da logo */
 .logo img{
+    width: 160px;
+    height: 90px;
     object-fit: cover;
 }
 /* Ajuste para o container do nav */

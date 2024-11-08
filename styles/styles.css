@@ -7,11 +7,6 @@
 }
 /* Header Guilherme */
 
-/* Estilo da logo */
-.logo img{
-    width: 120px;
-    height: 100px;
-}
 /* Ajuste para o container do nav */
 nav {
     flex: 1;
