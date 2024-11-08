@@ -7,20 +7,6 @@
 }
 /* Header Guilherme */
 
-
-/* Estilo do header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em 2em;
-    backdrop-filter: blur(5px);
-    background-color: #00000031;
-    color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
 /* Estilo da logo */
 .logo img{
     width: 120px;
@@ -305,10 +291,6 @@ body{
     font-size: 100px;
 }
 
-footer{
-    height: 350px;
-    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
-}
 
 @-webkit-keyframes shadow-drop-2-center {
     0% {
