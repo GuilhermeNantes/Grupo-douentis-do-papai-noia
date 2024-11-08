@@ -1,6 +1,7 @@
 body{
     background-color: bisque;
-},html{margin:0;padding:0;}
+}
+*{margin:0;padding:0;}
 
 .wrapper {
   height: 100vh;
@@ -27,7 +28,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  transform: translateZ(-2px) scale(2,5);
+  transform: translateZ(-1px) scale(2,5);
 }
 
 .bg1::before {
