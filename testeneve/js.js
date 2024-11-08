@@ -27,19 +27,7 @@ const createSnow = (num) => {
     snowContainer.append(snow);
   }
 }
-
-const removeSnow = () => {
-  snowContainer.style.opacity = "0";
-  setTimeout(() => {
-    snowContainer.remove()
-  }, 500)
-}
-
 window.addEventListener("load", () => {
   createSnow(30)
   setTimeout(removeSnow, (1000 * 60))
-});
-
-window.addEventListener("click", () => {
-  removeSnow()
 });

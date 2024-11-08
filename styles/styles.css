@@ -1,4 +1,6 @@
-body,html{margin:0;padding:0;}
+body{
+    background-color: bisque;
+},html{margin:0;padding:0;}
 
 .wrapper {
   height: 100vh;
@@ -25,11 +27,13 @@ body,html{margin:0;padding:0;}
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  transform: translateZ(-2px) scale(2);
+  transform: translateZ(-2px) scale(2,5);
 }
 
 .bg1::before {
-  background-image: url('https://wallpapers.com/images/hd/1920x1080-hd-christmas-il6kezkoizbvctl4.jpg');
+  background-image: url('https://s1.1zoom.me/b7866/985/Christmas_Snowflakes_Red_background_Template_573816_1920x1080.jpg');
+  width: 100%;
+  height: 50%;
 }
   
                                        /* final Paralax */
@@ -73,26 +77,27 @@ header{
     align-items: center;
     padding: 20px;
     height: 60px; 
-    background-color: rgba(255, 0, 0, 0.815);
+    background-color: rgba(255, 0, 0, 0);
    
 }
-/* header do site -- guilherme */
-/* .opcoes a{
-    padding: 10px 20px;
-    background: #000;
-    text-decoration: none;
-}
-.opcoes button{
-    border: 0;
-    background: none;
+
+                                 /* Efeito Neve */
+
+#snow-container {
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    transition: opacity 500ms;
+    width: 100%;
+  }
+  
+.snow {
+    animation: fall  ease-in infinite, sway ease-in-out infinite;
+    color: rgb(255, 255, 255);
+    position: absolute;
 }
 
-.opcoes a:hover{
-    background: #fff;
-}
-.opcoes button:hover{
-    background: #fff;
-} só um ideia mais para criaçao depois*/
+                                 /* Efeito Neve */
 
 .descInicio{
     display: flex;
@@ -166,6 +171,37 @@ header{
     }
 }
 
+@keyframes fall {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes sway {
+    0% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: 50px;
+    }
+    50% {
+      margin-left: -50px;
+    }
+    75% {
+      margin-left: 50px;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  
 @media(max-width: 480px){
     .descInicio{
         flex-direction: column;
