@@ -1,9 +1,17 @@
-
+// Carrega o conteúdo do header.html
 document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    fetch("/includes/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
 
-    menuToggle.addEventListener("click", function() {
-        navLinks.classList.toggle("show");
-    });
+            // Ativa o menu toggle depois de carregar o header
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            menuToggle.addEventListener("click", function() {
+                navLinks.classList.toggle("show");
+            });
+        });
 });
+z

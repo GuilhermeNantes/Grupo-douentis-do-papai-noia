@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="/styles/sobre.css">
 </head>
 <body>
-    <header>
-        <h1>Equipe - Desenvolvedores</h1>
-        <p>Conheça os principais intrigantes</p>
-    </header>
+    <div class="header">    
+        <script>
+            fetch('../includes/header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header').innerHTML = data);
+        </script>
+    </div>
 
     <main>
         <section class="intro">
