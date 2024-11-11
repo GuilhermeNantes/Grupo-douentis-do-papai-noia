@@ -131,8 +131,8 @@ body{
 .card {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 450px;
     background-color: burlywood;
     border-radius: 8px;
     overflow: hidden;
@@ -154,6 +154,10 @@ body{
     display: flex;
     flex-direction: column;
     padding: 10px;
+}
+
+.cardText p{
+    text-align: justify;
 }
 
 .cardText .tituloCard {
@@ -202,6 +206,11 @@ body{
     text-align: center;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+}
+
+footer{
+    height: 400px;
+    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
 }
 
 @keyframes fall {
