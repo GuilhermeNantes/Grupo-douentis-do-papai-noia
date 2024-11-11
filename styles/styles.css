@@ -116,6 +116,23 @@ body{
     height: 900px;
 }
 
+/* Efeito da Neve */
+#snow-container {
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    transition: opacity 500ms;
+    width: 100%;
+  }
+ 
+.snow {
+    animation: fall  ease-in infinite, sway ease-in-out infinite;
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+
+/* ------------ */
+
 .resto{
     display: flex;
     flex-direction: column;
@@ -288,6 +305,37 @@ body{
 
 #contador{
     font-size: 100px;
+}
+
+@keyframes fall {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 1;
+    }
+}
+ 
+  @keyframes sway {
+    0% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: 50px;
+    }
+    50% {
+      margin-left: -50px;
+    }
+    75% {
+      margin-left: 50px;
+    }
+    100% {
+      margin-left: 0;
+    }
 }
 
 
