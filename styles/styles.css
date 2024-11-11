@@ -5,109 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Header Guilherme */
 
-/* Ajuste para o container do nav */
-nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;  /* Centraliza os itens dentro do nav */
-}
-
-/* Estilo do menu de navegação */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2em;
-    align-items: center;
-}
-
-.nav-links li a {
-    padding: 16px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-links li a:hover {
-    border-radius: 25px;
-    background-color: #ffcc00;
-    transform: translateY(-2px);
-}
-
-/* Botão */
-.header-button {
-    background-color: #ffffff;
-    color: #333;
-    border: none;
-    padding: 16px 45px;
-    border-radius: 25px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.header-button:hover {
-    background-color: #000000;
-    color:#ffffff;
-}
-
-/* Ícone de menu no mobile */
-.menu-toggle {
-    
-    display: none; /* Escondido em telas grandes */
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 999;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    border-radius: 3px;
-    transition: transform 0.3s ease;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Esconde os links de navegação */
-        position: absolute;
-        top: 115px;
-        right: 0;
-        background-color: #00000071;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        padding: 1em 0;
-        gap: 1.5em;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .nav-links.show {
-        gap: 30px;
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .menu-toggle {
-        display: flex; /* Exibe o ícone do menu no mobile */
-    }
-
-    .header-button {
-        display: none; /* Esconde o botão em telas menores */
-    }
-}
-/* Fim Header */
 body{
     background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
 }
@@ -185,7 +83,6 @@ body{
     font-size: 25px;
 }
 
-
 .descInicio{
     
     justify-content: center;
@@ -194,7 +91,6 @@ body{
     margin-top: 100px;
     gap: 10%;
 }
-
 
 #inscrever1{
     border: 0;
@@ -271,18 +167,6 @@ body{
     color: #555;
 }
 
-/* Responsividade para a seção de Cards */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-}
 
 /* Seção do Contador */
 .containerContador {
@@ -305,6 +189,19 @@ body{
 
 #contador{
     font-size: 100px;
+}
+
+/* Estilo do Botão de Inscrição */
+#inscrever2 {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 @keyframes fall {
@@ -380,22 +277,12 @@ body{
         margin-top: 50px;
     }
 
-/* Estilo do Botão de Inscrição */
-#inscrever2 {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
+    .imagemInicio{
+        width: 300px;
+        height: 300px;
+    }
 
     .imagemInicio .cor{
-        background-color: rgb(255, 91, 91);
-        border-radius: 1000px;
         filter: blur(70px);
     }
 
@@ -434,5 +321,54 @@ body{
 
     #contador{
         font-size: 70px;
+    }
+
+}
+
+/* Responsividade para a seção de Cards */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde os links de navegação */
+        position: absolute;
+        top: 115px;
+        right: 0;
+        background-color: #00000071;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+        gap: 1.5em;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.show {
+        gap: 30px;
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o ícone do menu no mobile */
+    }
+
+    .header-button {
+        display: none; /* Esconde o botão em telas menores */
     }
 }
