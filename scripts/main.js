@@ -14,3 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 });
+
+function increver(){
+  window.location.href = "../cadastro/index.html"
+}
+
+function home(){
+    window.location.href = "../home/index.html"
+}
