@@ -85,12 +85,12 @@ nav {
 
 /* Ícone de menu no mobile */
 .menu-toggle {
-    
     display: none; /* Escondido em telas grandes */
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     z-index: 999;
+    filter: drop-shadow(0px 1px 2px black);
 }
 
 .menu-toggle .bar {
