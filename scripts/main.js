@@ -22,3 +22,11 @@ function increver(){
 function home(){
     window.location.href = "../home/index.html"
 }
+
+function agenda() {
+    document.documentElement.scrollTo({
+        top: 1000,
+        left: 0,
+        behavior: "smooth",
+    });
+  }
