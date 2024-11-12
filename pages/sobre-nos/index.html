@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sobre-nos</title>
     <link rel="stylesheet" href="/styles/sobre.css">
+    <link rel="stylesheet" href="/styles/header.css">
 </head>
 <body>
-    <div class="header">    
-        <script>
-            fetch('../includes/header.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('header').innerHTML = data);
-        </script>
-    </div>
+    <div id="header">
+    
+    </div><!-- aqui vai carregar a tela do meu header das pastas incluser -->
 
     <main>
         <section class="intro">
@@ -46,5 +43,7 @@
     <footer>
         <p>Feito com carinho pelos fãs de Undertale.</p>
     </footer>
+
+    <script src="/scripts/main.js"></script>
 </body>
 </html>

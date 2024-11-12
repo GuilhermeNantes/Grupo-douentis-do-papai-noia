@@ -6,12 +6,15 @@
     font-family: 'Arial', sans-serif;
 }
 
+main{
+    padding: 20px;
+}
+
 /* Corpo */
 body {
     background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 20px;
     background-image: url('https://i.pinimg.com/originals/2d/c3/11/2dc311131d04ad06584d44dcfc5ee379.jpg');
     background-size: cover;
     background-attachment: fixed;
