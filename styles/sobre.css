@@ -1,47 +1,183 @@
-/* Variáveis de cores para um estilo futurista */
 :root {
-    --bg-color: #0d0d0d;
-    --text-color: #e0e0e0;
-    --accent-color: #00d4ff;
-    --card-bg: rgba(30, 30, 30, 0.8);
-    --border-color: #00d4ff;
-    --shadow-color: rgba(0, 0, 0, 0.5);
-    --glow-color: rgba(0, 212, 255, 0.7);
-}
-
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    --cor-fundo: #0a0a0a;  /* Fundo escuro */
+    --cor-primaria: #00ff9d;  /* Verde neon para efeito hacker */
+    --cor-secundaria: #1f1f1f;  /* Cinza escuro */
+    --cor-detalhe: #00ccff;  /* Azul neon */
+    --cor-texto: #e0e0e0;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    /* display: flex;
+    flex-direction: column;  ta juntondo as nav com a imagen da logo*/
     align-items: center;
-    flex-direction: column;
     min-height: 100vh;
-    text-align: center;
 }
 
 main {
     width: 100%;
-    max-width: 1200px;
     padding: 20px;
+    text-align: center;
 }
 
-/* Introdução */
-.intro h2 {
-    font-size: 32px;
-    color: var(--accent-color);
-    margin-bottom: 10px;
+/* Título da página */
+#introducao h1 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 50px;
 }
 
-.intro p {
+/* Estilo para as cards da equipe */
+#equipes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Container */
+.card-container {
+    width: 320px;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    animation: glowPulse 2s infinite alternate;
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+}
+
+/* Topo do Card com Efeito Hacker */
+.top {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.2), rgba(0, 204, 255, 0.3));
+    background-size: 200% 200%;
+    border-bottom: 1px solid var(--cor-detalhe);
+    animation: mudarCor 6s infinite;
+}
+
+/* Card Image */
+.imagem-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0 0 10px var(--cor-primaria), 0 0 20px var(--cor-detalhe);
+    animation: glowPulse 2s infinite alternate;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.imagem-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Conteúdo do Card */
+.button {
+    padding: 20px;
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+.button h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.button h4 {
+    font-size: 1rem;
+    color: var(--cor-detalhe);
+    margin: 10px 0;
+}
+
+.button p {
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+/* Botão Contato */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    color: var(--cor-primaria);
+    font-size: 0.85rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid var(--cor-detalhe);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: bordaNeon 1.5s infinite alternate;
+}
+
+.btn:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    box-shadow: 0 0 10px var(--cor-primaria), 0 0 20px var(--cor-detalhe);
+}
+
+/* Chuva de código binário */
+/* Fundo de Chuva de Código Binário */
+.binary-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca a chuva atrás do conteúdo */
+    pointer-events: none; /* Impede que o efeito de chuva interfira com os cliques */
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+/* Cada coluna de código */
+.binary-column {
+    color: rgba(0, 255, 157, 0.872);
     font-size: 18px;
-    color: var(--text-color);
-   
+    line-height: 1.5;
+    animation: fall 4s linear infinite;
+    white-space: nowrap;
+    text-shadow: 0 0 5px rgba(0, 255, 157, 0.7), 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+/* Animação de queda */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
