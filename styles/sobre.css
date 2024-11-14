@@ -55,6 +55,10 @@ main {
     transform: scale(1.05);
 }
 
+.card-container h3{
+    text-align: center;
+}
+
 /* Topo do Card com Efeito Hacker */
 .top {
     height: 120px;
