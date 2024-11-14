@@ -5,109 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Header Guilherme */
 
-/* Ajuste para o container do nav */
-nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;  /* Centraliza os itens dentro do nav */
-}
-
-/* Estilo do menu de navegação */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2em;
-    align-items: center;
-}
-
-.nav-links li a {
-    padding: 16px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-links li a:hover {
-    border-radius: 25px;
-    background-color: #ffcc00;
-    transform: translateY(-2px);
-}
-
-/* Botão */
-.header-button {
-    background-color: #ffffff;
-    color: #333;
-    border: none;
-    padding: 16px 45px;
-    border-radius: 25px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.header-button:hover {
-    background-color: #000000;
-    color:#ffffff;
-}
-
-/* Ícone de menu no mobile */
-.menu-toggle {
-    
-    display: none; /* Escondido em telas grandes */
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 999;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    border-radius: 3px;
-    transition: transform 0.3s ease;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Esconde os links de navegação */
-        position: absolute;
-        top: 115px;
-        right: 0;
-        background-color: #00000071;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        padding: 1em 0;
-        gap: 1.5em;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .nav-links.show {
-        gap: 30px;
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .menu-toggle {
-        display: flex; /* Exibe o ícone do menu no mobile */
-    }
-
-    .header-button {
-        display: none; /* Esconde o botão em telas menores */
-    }
-}
-/* Fim Header */
 body{
     background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
 }
@@ -115,6 +13,24 @@ body{
 .inicio{
     height: 900px;
 }
+
+/* Efeito da Neve */
+#snow-container {
+    height: 1200px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity 600ms;
+    width: 100%;
+  }
+ 
+.snow {
+    animation: fall  ease-in infinite, sway ease-in-out infinite;
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+
+/* ------------ */
 
 .resto{
     display: flex;
@@ -168,7 +84,6 @@ body{
     font-size: 25px;
 }
 
-
 .descInicio{
     
     justify-content: center;
@@ -177,7 +92,6 @@ body{
     margin-top: 100px;
     gap: 10%;
 }
-
 
 #inscrever1{
     border: 0;
@@ -218,12 +132,11 @@ body{
 .card {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 400px;
-    background-color: burlywood;
+    width: 400px;
+    height: 500px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(1px 4px 4px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease;
 }
 
@@ -233,39 +146,53 @@ body{
 
 .cardImg img {
     width: 100%;
-    height: 200px;
+    height: 220px;
+    z-index: -1;
+    position: absolute;
     object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
 }
 
 .cardText {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 40%, rgb(222, 184, 135) 45%, rgb(222, 184, 135) 100%);
     display: flex;
+    height: 100%;
     flex-direction: column;
-    padding: 10px;
+    gap: 1em;
+    padding: 1em;
+    padding-top: 220px;
+    text-align: justify;
 }
 
 .cardText .tituloCard {
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 10px;
+    
 }
 
 .cardText .descCard {
     font-size: 1em;
-    color: #555;
+    color: #000000;
 }
 
-/* Responsividade para a seção de Cards */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
+.detalhes{
+    background-color: #bc1111;
+    padding: 0.8em;
+    font-size: large;
+    border: 0;
+    transition:  0.3s ease;
 }
+
+.detalhes a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.detalhes:hover{
+    filter: drop-shadow(0px -3px 6px #bc1111);
+    text-shadow: 0px 0px 3px white;
+}
+
 
 /* Seção do Contador */
 .containerContador {
@@ -282,12 +209,97 @@ body{
 }
 
 #contDias{
+    color: #bc1111;
+    filter: drop-shadow(6px 6px 0px black);
+    font-family: "DS-Digital";
     font-size: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 #contador{
+    text-align: center;
+    margin-top: 20px;
+    width: 340px;
+    color: #bc1111;
+    filter: drop-shadow(3px 3px 0px black);
+    font-weight: 500;
+    font-family: "DS-Digital";
     font-size: 100px;
+}
+
+@font-face {
+    font-family: "DS-Digital";
+    src: url(/fonts/ds_digital/DS-DIGII.TTF);
+}
+
+/* Estilo do Botão de Inscrição */
+#inscrever{
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 1000px;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 6px black;
+    filter: drop-shadow(0px 3px 4px rgb(0, 0, 0));
+    transition: 0.3s ease-in-out;
+}
+
+#inscrever:hover {
+    scale: 1.1;
+    filter: drop-shadow(0px 0px 7px rgb(255, 191, 191));
+    background-color: #000000;
+    box-shadow: inset 0px 0px 16px rgb(255, 0, 0);
+    filter: drop-shadow(0px 4px 4px black);
+    text-shadow: 0px 0px 8px rgb(255, 0, 0);
+    color:#ffffff;
+}
+
+footer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 400px;
+    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
+}
+
+footer p{
+    color: white;
+    margin-bottom: 20px;
+}
+
+@keyframes fall {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 1250px;
+      opacity: 1;
+    }
+}
+ 
+  @keyframes sway {
+    0% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: 50px;
+    }
+    50% {
+      margin-left: -50px;
+    }
+    75% {
+      margin-left: 50px;
+    }
+    100% {
+      margin-left: 0;
+    }
 }
 
 
@@ -309,18 +321,6 @@ body{
 
 @media(max-width: 768px){
 
-    .opcoes{
-        display: none;
-    }
-
-    .menu{
-        display: flex;
-    }
-
-    #inscrever1{
-        display: none;
-    }
-
     .inicio{
         height: 1000px;
     }
@@ -332,38 +332,17 @@ body{
         margin-top: 50px;
     }
 
-/* Estilo do Botão de Inscrição */
-#inscrever2 {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
+    .imagemInicio{
+        width: 300px;
+        height: 300px;
+    }
 
     .imagemInicio .cor{
-        background-color: rgb(255, 91, 91);
-        border-radius: 1000px;
         filter: blur(70px);
     }
 
     .textInicio{
         width: 300px;
-    }
-
-    header{
-        padding: 20px;
-        padding-bottom: 10px;
-    }
-
-    .logo img{
-        height: 60px;
-        width: 110px;
-        object-fit: cover;
     }
 
     .textInicio h1{
@@ -384,7 +363,28 @@ body{
         margin-top: 200px;
     }
 
+    .container { /* Responsividade para a seção de Cards */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+        height: 550px;
+    } /* ----------- */
+
+    .cardText{
+        padding-top: 190px;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 30%, rgb(222, 184, 135) 35%, rgb(222, 184, 135) 100%);
+    }
+
     #contador{
         font-size: 70px;
+        width: 300px;
+    }
+
+    footer img{
+        width: 300px;
     }
 }
