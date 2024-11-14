@@ -209,12 +209,26 @@ body{
 }
 
 #contDias{
+    color: #bc1111;
+    filter: drop-shadow(6px 6px 0px black);
+    font-family: "DS-Digital";
     font-size: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 #contador{
+    margin-top: 20px;
+    width: 340px;
+    color: #bc1111;
+    filter: drop-shadow(3px 3px 0px black);
+    font-weight: 500;
+    font-family: "DS-Digital";
     font-size: 100px;
+}
+
+@font-face {
+    font-family: "DS-Digital";
+    src: url(/fonts/ds_digital/DS-DIGII.TTF);
 }
 
 /* Estilo do Botão de Inscrição */
