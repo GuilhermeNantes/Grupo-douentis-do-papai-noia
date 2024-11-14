@@ -1,63 +1,213 @@
-*{
-    padding: 0;
+/* Reset Básico */
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
-body{
-    height: 100vh;
-    background-image: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
-}
-
-main{
+/* Configuração do Corpo */
+body {
+    background: url(https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
     display: flex;
-    height: 85%;
     flex-direction: column;
+    height: auto; /* Permitindo que o conteúdo ultrapasse a altura da tela */
+    min-height: 100vh; /* Garante que a altura mínima seja 100% da tela */
+    overflow-y: auto; /* Ativa o scroll vertical */
+}
+
+/* Wrapper Principal */
+.wrapper {
+    align-items: center;
     justify-content: center;
+    gap: 20px;
+    width: 420px;
+    border: 2px solid rgba(255, 255, 255, 0.479);
+    color: #fff;
+    backdrop-filter: blur(30px); /* Efeito de desfoque no fundo */
+    border-radius: 12px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Garante que o formulário seja centralizado */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para centralização correta */
+}
+
+/* Cabeçalho */
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Caixa de Entrada */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    transition: border-color 0.3s;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box input:focus {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ícones */
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Mensagem de Erro */
+.error-message {
+    position: absolute;
+    bottom: -23px;
+    left: 15px;
+    color: #ffffff; /* erro */
+    font-size: 12px;
+    visibility: hidden;
+}
+
+/* Exibir mensagem de erro em caixas com erro */
+.input-box.error .error-message {
+    visibility: visible;
+}
+
+/* Estilo de Caixa de Erro */
+.input-box.error input {
+    border-color: #ff0000;
+}
+
+/* Botão de Envio */
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.wrapper .btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Links de Registro */
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+    color: #fff;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+}
+
+/* Header e Nav */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.logo img {
+    width: 160px;
+    height: 90px;
+    object-fit: cover;
+    filter: drop-shadow(0px 1px 4px rgb(0, 0, 0));
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
     align-items: center;
 }
 
-.inscricao{
-    backdrop-filter: blur(2px);
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 103, 103, 0.329);
-    border-radius: 20px;
-    box-shadow: inset 0px 0px 32px rgba(255, 255, 255, 0.541);
-    border: solid 2px white;
-    padding: 30px;
-    gap: 40px;
-    filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.507));
-}
-
-.inscricao h1{
+.nav-links li a {
+    padding: 16px 20px;
     color: white;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    filter: drop-shadow(0px 1px 3px black);
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+.nav-links li a:hover {
+    filter: none;
+    border-radius: 25px;
+    background-color: #64ac20;
+    transform: translateY(-2px);
 }
 
-input{
-    border: solid 2px white;
-    background-color: rgba(255, 255, 255, 0.267);
-    width: 450px;
-    padding: 1em 1.5em;
-    border-radius: 10px;
-    color: white;
-}
-
-input::placeholder{
-    color: white;
-}
-
-input:hover{
-    animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-button{
+.header-button {
     background-color: #ffffff;
     color: #333;
     border: none;
@@ -69,36 +219,66 @@ button{
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.header-button:hover {
     filter: drop-shadow(0px 0px 7px rgb(255, 191, 191));
     background-color: #000000;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-@keyframes shadow-inset-center {
-    0% {
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-              box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-    100% {
-      -webkit-box-shadow: inset 0 0 14px 0px rgba(255, 255, 255, 0.5);
-              box-shadow: inset 0 0 14px 0px rgba(255, 255, 255, 0.5);
-    }
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
 }
 
-@media(max-width: 768px){
-    input{
-        width: 300px;
-    }
+.menu-toggle .bar {
+    width: 35px;
+    height: 4px;
+    background: white;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
 }
 
-@media(max-width: 320px){
-    .inscricao{
-        padding-left: 10px;
-        padding-right: 10px;
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
     }
 
-    input{
-        width: 280px;
+    .logo img {
+        height: 60px;
+        width: 110px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 94px;
+        right: 0;
+        background-color: #b9000095;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0;
+        gap: 1.5em;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header-button {
+        display: none;
     }
 }
