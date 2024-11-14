@@ -217,6 +217,7 @@ body{
 }
 
 #contador{
+    text-align: center;
     margin-top: 20px;
     width: 340px;
     color: #bc1111;
@@ -380,6 +381,7 @@ footer p{
 
     #contador{
         font-size: 70px;
+        width: 300px;
     }
 
     footer img{
